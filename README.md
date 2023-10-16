@@ -1,24 +1,15 @@
-# pec-codeblooded-5.0
+Steps for installation of prerequisites
+1. Install the requirements using `pip install -r requirements.txt`
+2. Install postgresql and create a database named `postgres` with username `postgres` and password `mypostgres` and port `5432`
+3. Change the directory to `h1bdata` using command `cd h1bdata`
+4. Run the command `python manage.py makemigrations` and `python manage.py migrate` to create the database tables
+5. Move the csv files to `data` folder inside the current directory
+6. Run the command `python ingest.py` to add the data from the csv files to the database
+7. Run the command `python manage.py runserver` to start the server
 
-## Guidelines 
-- Teams have to create a fork of this particular repo on start of hackathon.
-- Rename the repo as per the team name when you create the fork
-- Once you select the problem statement that you are going to work on, create a file as initial.md and give your team name, team members name and the problem statement you are trying to solve. Do this within first one hour of starting the hackathon. 
-- At the end of hackathon timing, STGI team will create a copy all the repos that are forked and only that will be used for evaluation. So ensure the code is committed to the forked repo only.
-- Do continuous commits to your own forks so that we can evaluate the commit history as well.
-- You can place your presentation and videos if any within the same repo by creating a new folder.
+## API Endpoints
+1. `/api/count/`: Returns the no. of applicants 
+2. `/api/mean/`: Returns the mean of the annual salary in $
+3. `/api/median/`: Returns the median of the annual salary in $
+4. `/api/percentile/?val=0.25`: Returns the 25th percentile of the annual salary in $, replace 0.25 with the desired percentile to find other percentile values.
 
-
-### All the very best..!! Happy Hacking..!! 
-
-
-
-## Topics 
-
-Team can chose ONE of the topic from below and work on that.
-
-- [Scenario - 1: Data Analysis](DataAnalysis.md)
-
-- [Scenario - 2: Audit Management](AuditManagement.md)
-
-- [Scenario - 3: Document Generator](DocumentGenerator.md)
