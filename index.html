@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STGI project</title>
+    <style>
+/* CSS RESET  */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* CSS variables */
+:root{
+    --navbar-height:59px;
+}
+
+/* Navigation bar  */
+#navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 0px;
+}
+/* Nav bar:lOGO AND IMAGE  */
+#logo{
+margin: 10px 34px;
+
+}
+#logo img{
+    height: 60px;
+    width: 60px;
+    margin: 3px 6px;
+     }
+
+/* Nav bar:List styling */
+#navbar ul{
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;   
+    opacity: 0.4; 
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    margin:5px;
+}
+
+#navbar ul li a{
+    color: white;
+   display: block;
+   margin: 3px 6px;
+   padding: 3px 2px;
+   border-radius: 20px;
+   text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.cont{
+   float:left}
+
+    </style>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <img src="STGI.JPEG" alt="ERROR">
+<nav id="navbar">
+    <div id="logo">
+        <img src="logo.jpg" alt="ERROR LOADING">
+    </div>
+    <ul>
+        <li class="item"><a href="/">Median</a></li>
+        <li class="item"><a href="/Mean">Mean</a></li>
+        <li class="item"><a href="/Count">Count</a></li>
+        <li class="item"><a href="/Percentile">Percentile</a></li>
+    </ul>
+    <div class="cont">
+    <input class="searchbox" type="text" placeholder="search">
+</div>
+</nav>
+    
+</body>
+</html>
